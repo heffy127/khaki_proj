@@ -66,7 +66,6 @@
 			}
 		}
 
-		
 		// 전체동의
 		$("#checkAll").click(function() {
 			//최상단 체크박스 클릭 input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
@@ -76,6 +75,40 @@
 				//클릭이 안되있으면 input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
 				$("input[name=chk]").prop("checked", false);
 			}
+		})
+		
+		// 약관 모달 동의버튼
+		$("#proBtn1").click(function() {
+			if(!$("#chk1").prop("checked")){
+				$("#chk1").click()
+			}
+			$(".modal").modal("hide")
+		})
+		$("#proBtn2").click(function() {
+			if(!$("#chk2").prop("checked")){
+				$("#chk2").click()
+			}
+			$(".modal").modal("hide")
+		})
+		$("#proBtn3").click(function() {
+			if(!$("#chk3").prop("checked")){
+				$("#chk3").click()
+			}
+			$(".modal").modal("hide")
+		})
+		$("#proBtn4").click(function() {
+			if(!$("#chk4").prop("checked")){
+				$("#chk4").click()
+			}
+			$(".modal").modal("hide")
+		})
+		
+		// 문자, 이메일 수신 버튼
+		$("#smsBtn").click(function() {
+			$("#smsPush_chk").click()
+		})
+		$("#emailBtn").click(function() {
+			$("#emailPush_chk").click()
 		})
 		
 		// 다음버튼
@@ -228,9 +261,9 @@
 												</div>
 
 												<div class="modal-footer">
-													<button type="button" class="btn btn-danger"
-														data-dismiss="modal">Close</button>
-												</div>
+                									<button type="button" class="btn btn-primary" id="proBtn1">동의합니다</button>
+               										 <button type="button" class="btn btn-danger  ml-auto" data-dismiss="modal">닫기</button> 
+          									    </div>
 
 											</div>
 										</div>
@@ -260,9 +293,9 @@
 												</div>
 
 												<div class="modal-footer">
-													<button type="button" class="btn btn-danger"
-														data-dismiss="modal">Close</button>
-												</div>
+                									<button type="button" class="btn btn-primary" id="proBtn2">동의합니다</button>
+               										 <button type="button" class="btn btn-danger  ml-auto" data-dismiss="modal">닫기</button> 
+          									    </div>
 
 											</div>
 										</div>
@@ -292,9 +325,9 @@
 												</div>
 
 												<div class="modal-footer">
-													<button type="button" class="btn btn-danger"
-														data-dismiss="modal">Close</button>
-												</div>
+                									<button type="button" class="btn btn-primary" id="proBtn3">동의합니다</button>
+               										 <button type="button" class="btn btn-danger  ml-auto" data-dismiss="modal">닫기</button> 
+          									    </div>
 
 											</div>
 										</div>
@@ -325,9 +358,9 @@
 												</div>
 
 												<div class="modal-footer">
-													<button type="button" class="btn btn-danger"
-														data-dismiss="modal">Close</button>
-												</div>
+                									<button type="button" class="btn btn-primary" id="proBtn4">동의합니다</button>
+               										 <button type="button" class="btn btn-danger  ml-auto" data-dismiss="modal">닫기</button> 
+          									    </div>
 
 											</div>
 										</div>
@@ -340,8 +373,8 @@
 										<font size="4"><b>마케팅 정보 수신 동의 (선택)</b></font>
 
 										<hr style="margin-block-start: 0.2em; margin-block-end: 0.8em;">
-										<input type="checkbox" name="chk" id="smsPush_chk" value=""> 문자수신 &nbsp;&nbsp;&nbsp;&nbsp;
-										<input type="checkbox" name="chk" id="emailPush_chk" value=""> 이메일수신
+										<input type="checkbox" name="chk" id="smsPush_chk" value=""> <a href="#none" id="smsBtn">문자수신</a> &nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="checkbox" name="chk" id="emailPush_chk" value=""> <a href="#none" id="emailBtn">이메일수신</a>
 									</div>
 									<br>
 									<form id="registerF" name="registerF" action="register3.do">
