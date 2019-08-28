@@ -32,7 +32,7 @@ public class CarConsumableDAO {
 		carConsumableDTO.setOil_engine_time(sp.format(today));
 		carConsumableDTO.setOil_transmission_time(sp.format(today));
 		
-		
+		my.insert("ccDAO.insert", carConsumableDTO);
 		
 	}	// insert End
 	

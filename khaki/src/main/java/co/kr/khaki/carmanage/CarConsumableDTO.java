@@ -2,7 +2,7 @@ package co.kr.khaki.carmanage;
 
 public class CarConsumableDTO {
 
-	private int khaki_num;
+	private String carnum1;
 	private int belt_timing_num;
 	private String belt_timing_time;
 	private int belt_operation_num;
@@ -35,11 +35,11 @@ etc_coolant_num, etc_coolant_time, etc_battery_num, etc_battery_time,
 etc_tire_num, etc_tire_time
 	 */
 	
-	public int getKhaki_num() {
-		return khaki_num;
+	public String getCarnum() {
+		return carnum1;
 	}
-	public void setKhaki_num(int khaki_num) {
-		this.khaki_num = khaki_num;
+	public void setCarnum(String carnum1) {
+		this.carnum1 = carnum1;
 	}
 	public int getBelt_timing_num() {
 		return belt_timing_num;
@@ -172,6 +172,21 @@ etc_tire_num, etc_tire_time
 	}
 	public void setEtc_tire_time(String etc_tire_time) {
 		this.etc_tire_time = etc_tire_time;
+	}
+	
+	@Override
+	public String toString() {
+		return "CarConsumableDTO [carnum=" + carnum + ", belt_timing_num=" + belt_timing_num + ", belt_timing_time="
+				+ belt_timing_time + ", belt_operation_num=" + belt_operation_num + ", belt_operation_time="
+				+ belt_operation_time + ", oil_engine_num=" + oil_engine_num + ", oil_engine_time=" + oil_engine_time
+				+ ", oil_transmission_num=" + oil_transmission_num + ", oil_transmission_time=" + oil_transmission_time
+				+ ", oil_break_num=" + oil_break_num + ", oil_break_time=" + oil_break_time + ", filter_aircon_num="
+				+ filter_aircon_num + ", filter_aircon_time=" + filter_aircon_time + ", filter_fuel_num="
+				+ filter_fuel_num + ", filter_fuel_time=" + filter_fuel_time + ", filter_aircleaner_num="
+				+ filter_aircleaner_num + ", filter_aircleaner_time=" + filter_aircleaner_time + ", etc_coolant_num="
+				+ etc_coolant_num + ", etc_coolant_time=" + etc_coolant_time + ", etc_battery_num=" + etc_battery_num
+				+ ", etc_battery_time=" + etc_battery_time + ", etc_tire_num=" + etc_tire_num + ", etc_tire_time="
+				+ etc_tire_time + "]";
 	}
 	
 	
