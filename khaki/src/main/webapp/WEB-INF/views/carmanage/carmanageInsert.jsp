@@ -31,6 +31,7 @@
 			// 차량 등록
  			$("#insert").click(function(){
  				
+ 				/*
  				// 차량 등록시 소모품들 교체는 다 된 것으로 하고 수치를 넣도록 구현
  				var distance1 = parseInt($("#distance").text());	//parseInt가 필요한지는 아직 모름
  				var num = 0;
@@ -42,9 +43,10 @@
 					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
  					
 					$("#consumable"+(i+1)).val(change_num);
- 				//
-				};
  				
+				};
+ 				*/
+				
  				$("#car_insert").submit();
  				alert("차량 등록 완료!");
  				
