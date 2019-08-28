@@ -32,7 +32,7 @@
  			$("#insert").click(function(){
  				
  				// 차량 등록시 소모품들 교체는 다 된 것으로 하고 수치를 넣도록 구현
- 				var distance1 = $("#distance").text();	//parseInt가 필요한지는 아직 모름
+ 				var distance1 = parseInt($("#distance").text());	//parseInt가 필요한지는 아직 모름
  				var num = 0;
  				
  				//배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
@@ -43,10 +43,10 @@
  					
 					$("#consumable"+(i+1)).val(change_num);
  				//
-				}
+				};
  				
  				$("#car_insert").submit();
- 				alert("차량 등록 완료!")
+ 				alert("차량 등록 완료!");
  				
 			});	// insert end
       
