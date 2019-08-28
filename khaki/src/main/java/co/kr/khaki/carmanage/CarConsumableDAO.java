@@ -20,6 +20,18 @@ public class CarConsumableDAO {
 		Date today = new Date();
 		SimpleDateFormat sp = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss a");
 		
+		carConsumableDTO.setBelt_operation_time(sp.format(today));
+		carConsumableDTO.setBelt_timing_time(sp.format(today));
+		carConsumableDTO.setEtc_battery_time(sp.format(today));
+		carConsumableDTO.setEtc_coolant_time(sp.format(today));
+		carConsumableDTO.setEtc_tire_time(sp.format(today));
+		carConsumableDTO.setFilter_aircleaner_time(sp.format(today));
+		carConsumableDTO.setFilter_aircon_time(sp.format(today));
+		carConsumableDTO.setFilter_fuel_time(sp.format(today));
+		carConsumableDTO.setOil_break_time(sp.format(today));
+		carConsumableDTO.setOil_engine_time(sp.format(today));
+		carConsumableDTO.setOil_transmission_time(sp.format(today));
+		
 		
 		
 	}	// insert End
