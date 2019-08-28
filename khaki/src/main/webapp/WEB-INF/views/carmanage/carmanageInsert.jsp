@@ -31,7 +31,7 @@
 			// 차량 등록
  			$("#insert").click(function(){
  				
- 				/*
+ 				
  				// 차량 등록시 소모품들 교체는 다 된 것으로 하고 수치를 넣도록 구현
  				var distance1 = parseInt($("#distance").text());	//parseInt가 필요한지는 아직 모름
  				var num = 0;
@@ -45,7 +45,7 @@
 					$("#consumable"+(i+1)).val(change_num);
  				
 				};
- 				*/
+ 				
 				
  				$("#car_insert").submit();
  				alert("차량 등록 완료!");
@@ -567,7 +567,7 @@
 		            					<input type="hidden" name="filter_aircleaner_num" id="consumable8">
 		            					<input type="hidden" name="etc_coolant_num" id="consumable9">
 		            					<input type="hidden" name="etc_battery_num" id="consumable10">
-		            					<input type="hidden" name="etc_tire_num" id="consumable11>
+		            					<input type="hidden" name="etc_tire_num" id="consumable11">
 		            					
 	            					</div>	<!-- form-group End -->
 	            				</div>
