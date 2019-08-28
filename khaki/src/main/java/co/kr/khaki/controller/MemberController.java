@@ -186,6 +186,11 @@ public class MemberController {
 		return "sms/smsFindPw"; 
 		}	
 	
-
+	// 마이페이지 탭 iframe
+	@RequestMapping("mypage_memberInfo.do")
+	public String memberInfo() {
+		
+		return "mypage/memberInfo"; 
+		}	
 
 }
