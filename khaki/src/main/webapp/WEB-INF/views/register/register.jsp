@@ -235,7 +235,7 @@ $(document).ready(
 	  	var naver_id_login = new naver_id_login("FeRQ2NAEFDfGZe9uWQc8", "http://localhost:8081/khaki/callback_register.do");
 	  	var state = naver_id_login.getUniqState();
 	  	naver_id_login.setButton("white", 3 ,49);
-	  	naver_id_login.setDomain("http://localhost:8081/");
+	  	naver_id_login.setDomain("http://localhost:9999/");
 	  	naver_id_login.setState(state);
 	  	naver_id_login.setPopup();
 	  	naver_id_login.init_naver_id_login();
