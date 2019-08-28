@@ -46,6 +46,35 @@ reg_date varchar2(30),
 img varchar2(50) 
 );
 
+	차량소모품 DB
+create table consumable(
+khaki_num number, 
+belt_timing_num number,
+belt_timing_time varchar2(30),
+belt_operation_num number,
+belt_operation_time varchar2(30),
+oil_engine_num number,
+oil_engine_time varchar2(30),
+oil_transmission_num number,
+oil_transmission_time varchar2(30),
+oil_break_num number,
+oil_break_time varchar2(30),
+filter_aircon_num number,
+filter_aircon_time varchar2(30),
+filter_fuel_num number,
+filter_fuel_time varchar2(30),
+filter_aircleaner_num number,
+filter_aircleaner_time varchar2(30),
+etc_coolant_num number,
+etc_coolant_time varchar2(30),
+etc_battery_num number,
+etc_battery_time varchar2(30),
+etc_tire_num number,
+etc_tire_time varchar2(30),
+constraint FK_num foreign key(khaki_num) references carManage(khaki_num) on delete cascade
+);
+
+
 	DB 테이블 생성
 create table notice_board(
 notice_num number primary key,

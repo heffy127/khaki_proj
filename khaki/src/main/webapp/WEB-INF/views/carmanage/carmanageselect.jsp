@@ -414,28 +414,6 @@
 	            									</td>
 	            								</tr>
 	            							</table>
-	            						
-	            							<%-- <div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="차량번호 : ${cmdto.carnum}" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="총 운행 : ${cmdto.distance}km" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="제조사 : ${cmdto.brand}" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="차량명 : ${cmdto.carname}" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="차량크기 : ${cmdto.car_size}" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="연료 : ${cmdto.fuel}" readonly="readonly">
-	            							</div>
-	            							<div class="row">
-		            							<input style="width: 400px;" class="btn btn-outline-primary" type="text" value="khaki 등록일시 : ${cmdto.reg_date}" readonly="readonly">
-	            							</div> --%>
 	            						</div>
 	            					</div>
             				</div>
@@ -461,7 +439,7 @@
 						            </div>
 						            
 						            <div class="modal-body">
-						            	<iframe src="car_consumable1.do?distance=${cmdto.distance}" width="770" height="750"></iframe>
+						            	<iframe src="car_consumable1.do?distance=${cmdto.distance}&khaki_num=${cmdto.khaki_num}" width="770" height="750"></iframe>
 						            </div>
 						            
 						            <div class="modal-footer">
