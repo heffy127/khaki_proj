@@ -35,20 +35,20 @@
 	
 	차량 DB
 create table carManage(
-khaki_num number primary key,
-carnum varchar2(10),
+khaki_num number,
+carnum varchar2(10) primary key,
 distance number,
 fuel varchar2(30),
 brand varchar2(30),
 car_size varchar2(30),
 carname varchar2(30),
 reg_date varchar2(30),
-img varchar2(50)
+img varchar2(50) 
 );
 
 	차량소모품 DB
 create table consumable(
-khaki_num number, 
+carnum varchar2(10),
 belt_timing_num number,
 belt_timing_time varchar2(30),
 belt_operation_num number,
@@ -71,7 +71,7 @@ etc_battery_num number,
 etc_battery_time varchar2(30),
 etc_tire_num number,
 etc_tire_time varchar2(30),
-constraint FK_num foreign key(khaki_num) references carManage(khaki_num) on delete cascade
+constraint FK_num foreign key(carnum) references carManage(carnum) on delete cascade
 );
 	
 	시퀀스

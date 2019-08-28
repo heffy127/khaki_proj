@@ -96,18 +96,19 @@ public class CarManageController {
 	}
 	
 	@RequestMapping("carmanageInsertDB.do")
-	public String carmanageInsertDB(CarManageDTO carManageDTO, CarConsumableDTO carConsumableDTO, @RequestParam(defaultValue="1") int curPage,
-			Model model){
+	public String carmanageInsertDB(CarManageDTO carManageDTO, CarConsumableDTO carConsumableDTO, 
+			@RequestParam(defaultValue="1") int curPage, Model model){
 		
 		System.out.println("CMcontroller Insert!");
 		cmdao.insert(carManageDTO);
-		
-		/*
+		System.out.println("test1");
+		//
 		System.out.println("CarConsumable Insert!");
 		ccdao.insert(carConsumableDTO);
-		
-		*/
-		
+		//
+		System.out.println("test2");
+		System.out.println(carConsumableDTO);
+		System.out.println("test3");
 		
 		List<CarManageDTO> cmlist = cmdao.selectAll();
 		int listCnt = cmlist.size();
