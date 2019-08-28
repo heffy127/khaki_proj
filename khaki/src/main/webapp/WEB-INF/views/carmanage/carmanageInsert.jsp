@@ -32,14 +32,14 @@
  			$("#insert").click(function(){
  				
  				// 차량 등록시 소모품들 교체는 다 된 것으로 하고 수치를 넣도록 구현
- 				var distance = $("#distance").text();	//parseInt가 필요한지는 아직 모름
+ 				var distance1 = $("#distance").text();	//parseInt가 필요한지는 아직 모름
  				var num = 0;
  				
  				//배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
 				var arr = new Array(100000, 30000, 10000, 30000, 40000, 15000, 30000, 20000, 50000, 60000, 30000);
  				
 				for(var i=0; i<arr.length;i++){
-					var change_num = Math.floor(distance / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
+					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
  					
 					$("#consumable"+(i+1)).val(change_num);
  				//
