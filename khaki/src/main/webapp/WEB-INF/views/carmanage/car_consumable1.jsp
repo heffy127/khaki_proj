@@ -142,23 +142,6 @@
 	배터리 : 30000~60000km
 	타이어 : 30000km
 	</div>
-	<div class="row">
-		<div class="col col-sm-12">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>test</span>
-			    </div>
-			    <div class="progress-percentage pctest1_1">
-			      <span>30%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-success pctest2_1" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-			  </div>
-			</div>
-		</div>
-	</div>
 	
 	벨트류
 	<div class="row">
