@@ -15,6 +15,8 @@ public class MemberDTO {
 	private String address3;
 	private String smsPush;
 	private String emailPush;
+	private String useCount;
+	private String handler;
 	
 	public MemberDTO() {
 		super();
@@ -132,6 +134,23 @@ public class MemberDTO {
 	public void setEmailPush(String emailPush) {
 		this.emailPush = emailPush;
 	}
+
+	public String getUseCount() {
+		return useCount;
+	}
+
+	public void setUseCount(String useCount) {
+		this.useCount = useCount;
+	}
+
+	public String getHandler() {
+		return handler;
+	}
+
+	public void setHandler(String handler) {
+		this.handler = handler;
+	}
+
 	
 	
 	
