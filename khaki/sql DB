@@ -22,7 +22,7 @@ address3 varchar2(50),
 point number default 0,
 smsPush char(1),
 emailPush char(1)
-)
+);
 
 drop table social;
 

@@ -47,6 +47,7 @@
 				for(var i=0; i<arr.length;i++){
 					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
 					$("#consumable"+(i+1)).val(change_num);
+					
 				};
 				
  				$("#car_insert").submit();
