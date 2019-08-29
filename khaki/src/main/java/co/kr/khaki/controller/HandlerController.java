@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import co.kr.khaki.handler.HandlerDAO;
 import co.kr.khaki.handler.HandlerDTO;
+import co.kr.khaki.member.MemberDAO;
+import co.kr.khaki.member.MemberDTO;
 
 @Controller
 public class HandlerController {
 	
 	@Autowired
 	HandlerDAO hdao;
+	
+	@Autowired
+	MemberDAO memberDAO;
 	
 	@RequestMapping("handler.do")
 	public String handler() {
@@ -48,6 +53,13 @@ public class HandlerController {
 		System.out.println("Controller Select2");
 		model.addAttribute("hlist2", handler);
 		return "handler/handlerDetailSearch2";
+	}
+	
+	@RequestMapping("handlerIdCheck.do")
+	public String handlerIdCheck(MemberDTO memberDTO, Model model) {
+		memberDTO = memberDAO.selectId(memberDTO.getId());
+		model.addAttribute("memberDTO", memberDTO);
+		return "handler/handlerIdCheck";
 	}
 	
 }

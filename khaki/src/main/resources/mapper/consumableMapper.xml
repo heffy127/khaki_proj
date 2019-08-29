@@ -8,11 +8,11 @@
 		SELECT
 		*
 		FROM consumable
-		WHERE carnum = #{carnum}
+		WHERE carnum1 = #{carnum1}
 	</select>
 
 	<resultMap type="ccDTO" id="rsMap">
-		<result property="carnum" column="carnum" />
+		<result property="carnum1" column="carnum1" />
 		<result property="belt_timing_num" column="belt_timing_num" />
 		<result property="belt_timing_time" column="belt_timing_time" />
 		<result property="belt_operation_num" column="belt_operation_num" />
@@ -42,13 +42,13 @@
 	</select>
 
 	<insert id="insert" parameterType="ccDTO">
-		INSERT INTO consumable (carnum, belt_timing_num, belt_timing_time, belt_operation_num, 
+		INSERT INTO consumable (carnum1, belt_timing_num, belt_timing_time, belt_operation_num, 
 			belt_operation_time, oil_engine_num, oil_engine_time, oil_transmission_num, 
 			oil_transmission_time, oil_break_num, oil_break_time, filter_aircon_num, 
 			filter_aircon_time,	filter_fuel_num, filter_fuel_time, filter_aircleaner_num, 
 			filter_aircleaner_time,	etc_coolant_num, etc_coolant_time, etc_battery_num, 
 			etc_battery_time, etc_tire_num, etc_tire_time)
-		VALUES(#{carnum}, #{belt_timing_num},#{belt_timing_time},#{belt_operation_num},#{belt_operation_time},
+		VALUES(#{carnum1}, #{belt_timing_num},#{belt_timing_time},#{belt_operation_num},#{belt_operation_time},
 			#{oil_engine_num},#{oil_engine_time},#{oil_transmission_num},#{oil_transmission_time}, 
 			#{oil_break_num}, #{oil_break_time}, #{filter_aircon_num}, #{filter_aircon_time}, 
 			#{filter_fuel_num}, #{filter_fuel_time}, #{filter_aircleaner_num}, #{filter_aircleaner_time}, 
@@ -82,7 +82,7 @@
 			etc_tire_num=#{etc_tire_num},
 			etc_tire_time=#{etc_tire_time}
 		WHERE
-			carnum = #{carnum}
+			carnum1 = #{carnum1}
 	</update>
 
 	<!-- <delete id="deleteSomething" parameterType="int">

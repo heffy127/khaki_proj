@@ -103,6 +103,7 @@ public class CarManageController {
 		cmdao.insert(carManageDTO);
 		System.out.println("test1");
 		//
+		System.out.println(carConsumableDTO);
 		System.out.println("CarConsumable Insert!");
 		ccdao.insert(carConsumableDTO);
 		//
