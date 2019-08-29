@@ -45,7 +45,7 @@
 				var arr = new Array(100000, 30000, 10000, 30000, 40000, 15000, 30000, 20000, 50000, 60000, 30000);
  				
 				for(var i=0; i<arr.length;i++){
-					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것);
+					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
 					$("#consumable"+(i+1)).val(change_num);
 					
 				};
