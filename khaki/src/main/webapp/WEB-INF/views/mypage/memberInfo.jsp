@@ -30,7 +30,6 @@
 <body>
 	<div class="card-body">
 		<div class="col-9" style="margin: 0 auto;">
-			<form>
 				<h6 class="heading-small text-muted mb-4">USER INFORMATION</h6>
 				<div class="pl-lg-4" style="padding-left: 14px; padding-right: 14px;">
 					<div class="row">
@@ -49,6 +48,7 @@
 							</div>
 						</div>
 					</div>
+				<form id="pwF" name="pwF" action="" method="post">	
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
@@ -65,7 +65,7 @@
 							</div>
 						</div>
 					</div>
-
+				</form>
 				</div>
 				<hr class="my-4" />
 				<!-- Address -->
@@ -76,6 +76,7 @@
 							<div class="form-group">
 								<label class="form-control-label" for="input-address">이메일</label>
 
+				<form id="emailF" name="emailF" action="" method="post">	
 								<table>
 									<tr>
 										<td><input type="text"
@@ -109,12 +110,12 @@
 										</td>
 									</tr>
 								</table>
-
+				</form>
 							</div>
 							<div class="form-group">
 								<label class="form-control-label" for="input-address">휴대폰
 									번호</label>
-
+				<form id=phoneF" name="phoneF" action="" method="post">	
 								<table>
 									<tr>
 										<td><input type="text"
@@ -143,10 +144,11 @@
 										</td>
 									</tr>
 								</table>
-
+				</form>
 							</div>
 							<div class="form-group">
 								<label class="form-control-label" for="input-address">주소</label>
+				<form id="addressF" name="addressF" action="" method="post">	
 								<table>
 										<tr height='65px'>
 											<td>
@@ -168,7 +170,7 @@
 										</td>
 										</tr>
 									</table>
-
+				
 								
 									<input type="text" class="form-control form-control-alternative" 
 												id="address" placeholder="주소" readonly="readonly" name="address1">
@@ -189,20 +191,31 @@
 											</td>
 										</tr>
 									</table>
+				</form>
 							</div>
 						</div>
 					</div>
-					
 
 				</div>
 				<hr class="my-4" />
 				<!-- Description -->
-				<h6 class="heading-small text-muted mb-4">DRIVER LICENSE</h6>
+				<h6 class="heading-small text-muted mb-4" style="padding: 0px; margin: 0px;">DRIVER LICENSE</h6>
 				<div class="pl-lg-4" style="padding-left: 14px; padding-right: 14px;">
 					<div class="form-group">
-						<label>About Me</label>
-						<textarea rows="4" class="form-control form-control-alternative"
-							placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+					<table>
+						<tr>
+							<td width="300px">
+								<input type="text" class="form-control form-control-alternative" 
+								id="license" placeholder="등록된 운전면허 정보가 없습니다." readonly="readonly" name="address1">
+							</td>
+							<td>
+								&nbsp;&nbsp;
+							</td>
+							<td>
+								<input type="button" class="btn btn-outline-warning" value="운전면허 정보  등록">
+							</td>
+						</tr>
+					</table>	
 					</div>
 				</div>
 				
@@ -211,12 +224,58 @@
 				<h6 class="heading-small text-muted mb-4">SOCIAL LOGIN&nbsp;&&nbsp;PUSH </h6>
 				<div class="pl-lg-4" style="padding-left: 14px; padding-right: 14px;">
 					<div class="form-group">
-						<label>About Me</label>
-						<textarea rows="4" class="form-control form-control-alternative"
-							placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+						<label class="form-control-label" for="input-address"  style="margin: 0px;">소셜 로그인</label>
+						<table>
+							<tr>
+								<td>
+									<img src="resources/assets/img/icons/common/Naver_burned.png" width="140px">
+								</td>
+								<td>
+									&nbsp;&nbsp;
+								</td>
+								<td>
+									<label class="custom-toggle">
+  										<input type="checkbox" checked>
+ 										<span class="custom-toggle-slider rounded-circle"></span>
+									</label>
+								</td>
+								<td>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								</td>
+								<td>
+									<img src="resources/assets/img/icons/common/Kakao_burned.png" width="140px">
+								</td>
+								<td>
+									&nbsp;&nbsp;
+								</td>
+								<td>
+									<label class="custom-toggle">
+  										<input type="checkbox" checked>
+ 										<span class="custom-toggle-slider rounded-circle"></span>
+									</label>
+								</td>
+								<td>
+									&nbsp;&nbsp;
+								</td>
+
+							</tr>
+							<tr>
+								<td colspan="5">
+									<label class="form-control-label" for="input-address">마케팅 정보 수신</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="5">
+									<form id="pushF" name="pushF" action="" method="post">	
+										<input type="checkbox" name="chk" id="smsPush_chk" value=""> <a href="#none" id="smsBtn">문자수신</a> &nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="checkbox" name="chk" id="emailPush_chk" value=""> <a href="#none" id="emailBtn">이메일수신</a>&nbsp;&nbsp;&nbsp;&nbsp;
+										<button type="button" class="btn btn-outline-primary" style="font-size: 7px; height: 35px;">확인</button>
+									</form>
+								</td>
+							</tr>
+						</table>
 					</div>
 				</div>
-			</form>
 		</div>
 	</div>
 </body>

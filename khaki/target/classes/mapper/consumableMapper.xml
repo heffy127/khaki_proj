@@ -4,9 +4,8 @@
 
 <mapper namespace="ccDAO">
 
-	<select id="select" parameterType="ccDTO" resultMap="rsMap">
-		SELECT
-		*
+	<select id="select" parameterType="String" resultMap="rsMap">
+		SELECT *
 		FROM consumable
 		WHERE carnum1 = #{carnum1}
 	</select>

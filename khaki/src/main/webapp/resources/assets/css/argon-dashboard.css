@@ -21266,4 +21266,10 @@ pre>code.highlight {
    float: left;
 }
 
+@media (min-width: 992px) {
+  .modal-lg-min {
+    max-width: 900px;
+  }
+}
+
 /*# sourceMappingURL=dashboard-free.css.map */
