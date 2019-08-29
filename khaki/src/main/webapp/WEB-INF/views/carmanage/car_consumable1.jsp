@@ -1,3 +1,4 @@
+<%@page import="co.kr.khaki.carmanage.CarConsumableDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,6 +10,7 @@
  	<script src="https://code.jquery.com/jquery-latest.js"></script>
  	
  	<% String distance = (String)request.getAttribute("distance"); %>
+	<% CarConsumableDTO ccdto = (CarConsumableDTO)request.getAttribute("ccdto"); %> 	
 	<script type="text/javascript">
 		$(function(){
 			
@@ -20,9 +22,21 @@
 			var num = 0;
 			var percentage = 0;
 			
+			var arr_DBdata = new Array(<%= ccdto.getBelt_timing_num()%>, <%= ccdto.getBelt_operation_num()%>, <%= ccdto.getOil_engine_num()%>,
+			<%= ccdto.getOil_transmission_num()%>, <%= ccdto.getOil_break_num()%>, <%= ccdto.getFilter_aircon_num()%>, <%= ccdto.getFilter_fuel_num()%>,
+			<%= ccdto.getFilter_aircleaner_num()%>, <%= ccdto.getEtc_coolant_num()%>, <%= ccdto.getEtc_battery_num()%>, <%= ccdto.getEtc_tire_num()%>
+			);
+			
+			
+			for (var j = 0; j < arr_DBdata.length; j++) {
+				var sum1 += arr_DBdata[j];
+				alert(sum1);
+			}
 			
 			// remainder 변수를 통해서 각 소모품주기 기준수로 나눠줌
 			for(var i=0; i<arr.length;i++){
+				
+				
 				var remainder = distance % arr[i];
 				
 				// 나눗셈 몫 = 교체해야할 시기
@@ -72,40 +86,6 @@
 				}
 				
 			};	//for문 End
-			
-			
-			/* var num = 75;
-			// num값이 바뀌어서 들어오는 문제
-			
-			$(".pctest1").children("span").text(num+'%');
-			
-			if(num<=50 && num >= 0){
-				$(".pctest2").attr({
-					'class': 'progress-bar bg-success',
-					'aria-valuenow': num,
-					'style':'width:'+num+'%;',
-				});
-			}else if(num <=75){
-				$(".pctest2").attr({
-					'class': 'progress-bar bg-warning',
-					'aria-valuenow': num,
-					'style':'width:'+num+'%;',
-				});
-			}else if(num <= 100){
-				$(".pctest2").attr({
-					'class': 'progress-bar bg-danger',
-					'aria-valuenow': num,
-					'style':'width:'+num+'%;',
-				});
-			}else{
-				alert("not range!!");
-			} */
-			
-			//progress bar test
-			/* $(".pctest1").children("span").text(num+'%');
-			$(".pctest2").attr('style','width:'+num+'%;');
-			$(".pctest2").attr('aria-valuenow',num); */
-			
 			
 			// progress-bar bg-success 초록색
 			// progress-bar bg-warning 주황색

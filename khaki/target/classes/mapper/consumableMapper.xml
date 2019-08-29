@@ -5,8 +5,7 @@
 <mapper namespace="ccDAO">
 
 	<select id="select" parameterType="String" resultMap="rsMap">
-		SELECT
-		*
+		SELECT *
 		FROM consumable
 		WHERE carnum1 = #{carnum1}
 	</select>
