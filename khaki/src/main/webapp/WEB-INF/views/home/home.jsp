@@ -34,6 +34,31 @@
   <link href="resources/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="resources/assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  	$(function() {
+  		// handler a태그 클릭시 sessionId의 핸들러 여부에 따라 호출 페이지가 달라짐.
+  		$("#handler_a").click(function(){
+  			var id = $("#session_id_check_input").val();
+  			$.ajax({
+			      url:"handlerIdCheck.do",
+			      data : {
+			    	  "id" : id
+			      },
+			      success:function(data){
+			    	  if(data == "") {
+			    		  location.href="handler.do";
+			    	  } else {
+			    		  location.href="handlerBoard";
+			    	  }
+			      },
+			      error : function(xhr, status) {
+		              alert(xhr + " : " + status);
+		          }
+			});
+  		})
+  	})
+  </script>
 </head>
 <body class="">
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
@@ -158,8 +183,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="handler.do">
+            <a class="nav-link " id="handler_a" style="cursor: pointer;">
               <i class="ni ni-collection text-green"></i> Handler
+              <input type="hidden" name="id" id="session_id_check_input" value="${sessionId }"> <!-- sessionId로 핸들러 여부에 따라 페이지 이동 달라짐. -->
             </a>
           </li>
           <li class="nav-item">

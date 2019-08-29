@@ -69,8 +69,8 @@
 
 	<!-- 회원가입 정보 주입 -->
 	<insert id="insert" parameterType="memberDTO">
-		INSERT INTO member (id, pw, name, email_id, email_site, phone1, phone2, phone3, postcode, address1, address2, address3, smsPush, emailPush)
-		VALUES(#{id}, #{pw}, #{name},#{email_id}, #{email_site},#{phone1}, #{phone2}, #{phone3},#{postcode}, #{address1}, #{address2}, #{address3},#{smsPush}, #{emailPush})
+		INSERT INTO member (id, pw, name, email_id, email_site, phone1, phone2, phone3, postcode, address1, address2, address3, smsPush, emailPush, useCount, handler)
+		VALUES(#{id}, #{pw}, #{name},#{email_id}, #{email_site},#{phone1}, #{phone2}, #{phone3},#{postcode}, #{address1}, #{address2}, #{address3},#{smsPush}, #{emailPush}, #{useCount},#{handler})
 	</insert>
 	
 	<insert id="insertSocial" parameterType="socialDTO">

@@ -24,7 +24,7 @@ public class Mail_auth {
 
 		String subject = "[KHAKI] 인증메일 발송"; // 메일 제목 입력해주세요.
 
-		String body = "KHAKI에서 이메일 인증을 위한 인증메일을 보내드립니다.\n\n http://localhost:8081/khaki/emailAuth_ok.do?emailAuthNum="+ authNum + "\n\n\n* 본 메일은 KHAKI에서 발송한 메일이며 발신전용 메일입니다. *"; // 메일 내용 입력해주세요.
+		String body = "KHAKI에서 이메일 인증을 위한 인증메일을 보내드립니다.\n\n http://localhost:9999/khaki/emailAuth_ok.do?emailAuthNum="+ authNum + "\n\n\n* 본 메일은 KHAKI에서 발송한 메일이며 발신전용 메일입니다. *"; // 메일 내용 입력해주세요.
 
 		Properties props = System.getProperties();
 
