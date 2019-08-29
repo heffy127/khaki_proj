@@ -13,7 +13,6 @@
 		$(function(){
 			
 			var distance = <%=distance%>;
-			//var distance1 = parseInt(distance);
 			
 			 
 			//배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
@@ -128,216 +127,219 @@
 
 </head>
 <body>
-	<div id="test">총 운행km : <%=distance %></div>
-	<div>
-	벨트류<br>
-	타이밍벨트 : 80000~1000000km
-	구동벨트 : 10000~30000km
-	
-	<br>오일류<br>
-	엔진오일 : 5000~10000km
-	변속기오일 : 30000km
-	브레이크 오일 : 40000km
-	
-	<br>필터류<br>
-	에어컨필터 : 15000km
-	연료 필터 : 30000km
-	에어클리너 : 20000km
-	
-	<br>기타<br>
-	냉각수 : 1~2년
-	배터리 : 30000~60000km
-	타이어 : 30000km
-	</div>
-	
-	벨트류
-	<div class="row">
-		<div class="col col-sm-6">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>타이밍 벨트</span>
-			    </div>
-			    <div class="progress-percentage pctest1 pctest1_2">
-			      <span>30%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-success pctest2_2" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-			  </div>
+	<div class="main-content">
+		<div class="container-fluid">
+			<div id="test">총 운행km : <%=distance %></div>
+			<div>
+			벨트류<br>
+			타이밍벨트 : 80000~1000000km
+			구동벨트 : 10000~30000km
+			
+			<br>오일류<br>
+			엔진오일 : 5000~10000km
+			변속기오일 : 30000km
+			브레이크 오일 : 40000km
+			
+			<br>필터류<br>
+			에어컨필터 : 15000km
+			연료 필터 : 30000km
+			에어클리너 : 20000km
+			
+			<br>기타<br>
+			냉각수 : 1~2년
+			배터리 : 30000~60000km
+			타이어 : 30000km
 			</div>
-		</div>	<!-- col-sm-6 50%  -->
-		
-		<div class="col col-sm-6">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>구동벨트</span>
-			    </div>
-			    <div class="progress-percentage pctest1_3">
-			      <span>40%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_3" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
-			  </div>
-			</div>
-		</div>
-	</div>	<!-- row -->
-	<br>
-	오일류
-	<div class="row">
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>엔진 오일</span>
-			    </div>
-			    <div class="progress-percentage pctest1_4">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-success pctest2_4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>	<!-- col-sm-4 33%  -->
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>변속기 오일</span>
-			    </div>
-			    <div class="progress-percentage pctest1_5">
-			      <span>90%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_5" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-			  </div>
-			</div>
-		</div>
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>브레이크 오일</span>
-			    </div>
-			    <div class="progress-percentage pctest1_6">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_6" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>
-	</div>	<!-- row -->
-	<br>
-	필터류
-	<div class="row">
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>에어컨 필터</span>
-			    </div>
-			    <div class="progress-percentage pctest1_7">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-success pctest2_7" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>	<!-- col-sm-4  -->
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>연료 필터</span>
-			    </div>
-			    <div class="progress-percentage pctest1_8">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_8" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>에어클리너</span>
-			    </div>
-			    <div class="progress-percentage pctest1_9">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_9" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>
-	</div>	<!-- row -->
-	<br>
-	기타
-	<div class="row">
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>냉각수</span>
-			    </div>
-			    <div class="progress-percentage pctest1_10">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-warning pctest2_10" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>	<!-- col-sm-6  -->
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>배터리</span>
-			    </div>
-			    <div class="progress-percentage pctest1_11">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_11" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>
-		
-		<div class="col col-sm-4">
-			<div class="progress-wrapper">
-			  <div class="progress-info">
-			    <div class="progress-label">
-			      <span>타이어</span>
-			    </div>
-			    <div class="progress-percentage pctest1_12">
-			      <span>60%</span>
-			    </div>
-			  </div>
-			  <div class="progress">
-			    <div class="progress-bar bg-danger pctest2_12" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-			  </div>
-			</div>
-		</div>
-	</div>	<!-- row -->
-	
+			
+			벨트류
+			<div class="row">
+				<div class="col col-sm-6">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>타이밍 벨트</span>
+					    </div>
+					    <div class="progress-percentage pctest1 pctest1_2">
+					      <span>30%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-success pctest2_2" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+					  </div>
+					</div>
+				</div>	<!-- col-sm-6 50%  -->
+				
+				<div class="col col-sm-6">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>구동벨트</span>
+					    </div>
+					    <div class="progress-percentage pctest1_3">
+					      <span>40%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_3" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+					  </div>
+					</div>
+				</div>
+			</div>	<!-- row -->
+			<br>
+			오일류
+			<div class="row">
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>엔진 오일</span>
+					    </div>
+					    <div class="progress-percentage pctest1_4">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-success pctest2_4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>	<!-- col-sm-4 33%  -->
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>변속기 오일</span>
+					    </div>
+					    <div class="progress-percentage pctest1_5">
+					      <span>90%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_5" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>브레이크 오일</span>
+					    </div>
+					    <div class="progress-percentage pctest1_6">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_6" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>
+			</div>	<!-- row -->
+			<br>
+			필터류
+			<div class="row">
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>에어컨 필터</span>
+					    </div>
+					    <div class="progress-percentage pctest1_7">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-success pctest2_7" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>	<!-- col-sm-4  -->
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>연료 필터</span>
+					    </div>
+					    <div class="progress-percentage pctest1_8">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_8" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>에어클리너</span>
+					    </div>
+					    <div class="progress-percentage pctest1_9">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_9" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>
+			</div>	<!-- row -->
+			<br>
+			기타
+			<div class="row">
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>냉각수</span>
+					    </div>
+					    <div class="progress-percentage pctest1_10">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-warning pctest2_10" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>	<!-- col-sm-6  -->
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>배터리</span>
+					    </div>
+					    <div class="progress-percentage pctest1_11">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_11" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col col-sm-4">
+					<div class="progress-wrapper">
+					  <div class="progress-info">
+					    <div class="progress-label">
+					      <span>타이어</span>
+					    </div>
+					    <div class="progress-percentage pctest1_12">
+					      <span>60%</span>
+					    </div>
+					  </div>
+					  <div class="progress">
+					    <div class="progress-bar bg-danger pctest2_12" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+					  </div>
+					</div>
+				</div>
+			</div>	<!-- row -->
+		</div>	<!-- container-fluid end  -->
+	</div>	<!-- main content end -->
 	
 	
 	
