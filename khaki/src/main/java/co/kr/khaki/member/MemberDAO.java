@@ -83,7 +83,11 @@ public class MemberDAO {
 		my.update("memberDAO.updatePw", memberDTO);
 		System.out.println("임시비밀번호 주입 성공");
 	}
-
+	
+	public void updateHandler(String handler) {
+		my.update("memberDAO.updateHandler", handler);
+		System.out.println("핸들러 여부 설정 성공");
+	}
 
 	
 	public List<MemberDTO> selectAll() {

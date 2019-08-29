@@ -62,4 +62,25 @@ public class HandlerController {
 		return "handler/handlerIdCheck";
 	}
 	
+	@RequestMapping("handlerUseCountCheck.do")
+	public String handlerUseCountCheck(MemberDTO memberDTO, Model model) {
+		System.out.println("ㄴㅇㄹㄴㅇㄹㅇㄴㅁ성공");
+		memberDTO = memberDAO.selectId(memberDTO.getId());
+		System.out.println("아이디 조회 성공");
+		System.out.println(memberDTO.getId() + "useCount");
+		if(Integer.parseInt(memberDTO.getUseCount()) > 4) {
+			System.out.println("1차");
+			String y = "Y";
+			memberDAO.updateHandler(y);
+			System.out.println("업데이트 성공");
+			model.addAttribute("handlerCheck", y);
+			System.out.println("model생성 성공");
+			return "handler/handlerUseCountCheck";
+		} else {
+			System.out.println("usecount가 없을 경우");
+			return "handler/handlerUseCountCheck";
+		}
+		
+	}
+	
 }

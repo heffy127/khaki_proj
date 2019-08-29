@@ -32,6 +32,35 @@
   <link href="resources/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="resources/assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  	$(function() {
+  		// handler a태그 클릭시 sessionId의 핸들러 여부에 따라 호출 페이지가 달라짐.
+  		$("#handler_btn").click(function(){
+  			var id = $("#session_id_check_input").val();
+  			alert("클릭");
+  			$.ajax({
+			      url:"handlerUseCountCheck.do",
+			      data : {
+			    	  "id" : id
+			      },
+			      success:function(data){
+			    	  alert("연결성공");
+			    	  if(data == "Y") {
+			    		  alert("축하드립니다! KHAKI의 핸들러가 되었습니다!\n원하는 드라이빙을 통해 포인트를 획득하세요!");
+			    		  location.href="handlerBoard.do";
+			    	  } else {
+			    		  alert("핸들러 요구조건에 충족하지 않습니다.\n요구조건을 다시 확인해 주세요. ");
+			    		  location.href="handler.do";
+			    	  }
+			      },
+			      error : function(xhr, status) {
+		              alert(xhr + " : " + status);
+		          }
+			});
+  		})
+  	})
+  </script>
 </head>
 
 <body class="">
@@ -407,7 +436,8 @@
 							2.보험은 KHAKI 보험약관을 준수합니다.</label>
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='handlerBoard.do'" style="margin-top: 5%; margin-bottom: 5%; font-size: 35px; font-family: 'Nanum Gothic Coding', monospace;">핸들러 신청하기</button>
+			<input type="hidden" name="id" id="session_id_check_input" value="${sessionId }">
+			<button type="button" class="btn btn-primary btn-lg btn-block" id="handler_btn" style="margin-top: 5%; margin-bottom: 5%; font-size: 35px; font-family: 'Nanum Gothic Coding', monospace;">핸들러 신청하기</button>
 		  </div>
         </div>
       </div>
@@ -444,7 +474,6 @@
   <script src="resources/assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!--   Argon JS   -->
   <script src="resources/assets/js/argon-dashboard.min.js?v=1.1.0"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
