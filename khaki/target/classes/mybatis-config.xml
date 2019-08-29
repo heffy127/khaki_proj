@@ -17,6 +17,7 @@
      	<typeAlias type="co.kr.khaki.handler.HandlerDTO" alias="hDTO"></typeAlias>
         <typeAlias type="co.kr.khaki.pay.PayDTO" alias="pDTO"></typeAlias>
         <typeAlias type="co.kr.khaki.car.CarDTO" alias="cDTO"></typeAlias>
+        <typeAlias type="co.kr.khaki.carmanage.CarConsumableDTO" alias="ccDTO"></typeAlias>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/memberMapper.xml" />
@@ -25,6 +26,7 @@
         <mapper resource="mapper/handlerMapper.xml" />
         <mapper resource="mapper/payMapper.xml" />
         <mapper resource="mapper/carMapper.xml" />
+        <mapper resource="mapper/consumableMapper.xml" />
 	</mappers>
 </configuration>
 

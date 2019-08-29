@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import co.kr.khaki.carmanage.CarConsumableDAO;
+import co.kr.khaki.carmanage.CarConsumableDTO;
 import co.kr.khaki.carmanage.CarList;
 import co.kr.khaki.carmanage.CarManageDAO;
 import co.kr.khaki.carmanage.CarManageDTO;
@@ -19,10 +21,22 @@ public class CarManageController {
 	@Autowired
 	CarManageDAO cmdao;
 	
+	@Autowired
+	CarConsumableDAO ccdao;
+	
 	@RequestMapping("car_consumable1.do")
-	public String car_consumable(String distance, Model model){
-		
+	public String car_consumable(String distance, int khaki_num, Model model){
+		// distance와 carnum(차량번호)을 넘겨 받음
 		model.addAttribute("distance",distance);
+		
+		
+		// comsumable select 필요
+		// consumable DB에서 넘겨받아옴(소모품 교체 횟수와 등록일시를)
+
+		// model로 보낼 것은 select해온 값들
+		model.addAttribute("khaki_num",khaki_num);
+		
+		
 		return "carmanage/car_consumable1";
 	}
 	
@@ -82,11 +96,19 @@ public class CarManageController {
 	}
 	
 	@RequestMapping("carmanageInsertDB.do")
-	public String carmanageInsertDB(CarManageDTO carManageDTO, @RequestParam(defaultValue="1") int curPage,
-			Model model){
+	public String carmanageInsertDB(CarManageDTO carManageDTO, CarConsumableDTO carConsumableDTO, 
+			@RequestParam(defaultValue="1") int curPage, Model model){
 		
 		System.out.println("CMcontroller Insert!");
 		cmdao.insert(carManageDTO);
+		System.out.println("test1");
+		//
+		System.out.println("CarConsumable Insert!");
+		ccdao.insert(carConsumableDTO);
+		//
+		System.out.println("test2");
+		System.out.println(carConsumableDTO);
+		System.out.println("test3");
 		
 		List<CarManageDTO> cmlist = cmdao.selectAll();
 		int listCnt = cmlist.size();

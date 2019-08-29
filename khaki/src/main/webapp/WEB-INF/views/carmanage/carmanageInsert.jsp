@@ -31,12 +31,29 @@
 			// 차량 등록
  			$("#insert").click(function(){
  				
+ 				
+ 				// 차량 등록시 소모품들 교체는 다 된 것으로 하고 수치를 넣도록 구현
+ 				// jquery에서 text()는 그 안의 text값을 가져오는것, val()은 value값을 가져오는 것(구분 잘하기)
+ 				var distance1 = $("#total_distance").val();		//parseInt가 필요한지는 아직 모름
+ 				var num = 0;
+ 				
+ 				// 차량번호 입력한 것을 그대로 받아와서 넘겨줌
+ 				var carnum_data = $("#carnum").val(); 
+ 				$("#carnum1").val(carnum_data);
+ 				
+ 				//배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
+				var arr = new Array(100000, 30000, 10000, 30000, 40000, 15000, 30000, 20000, 50000, 60000, 30000);
+ 				
+				for(var i=0; i<arr.length;i++){
+					var change_num = Math.floor(distance1 / arr[i]);		//distance에 따른 차량 소모품 교체 횟수(기준으로 나눈 것)
+					$("#consumable"+(i+1)).val(change_num);
+				};
+				
  				$("#car_insert").submit();
- 				alert("차량 등록 완료!")
+ 				alert("차량 등록 완료!");
  				
 			});	// insert end
       
-	
 		// 차량 정보가 들어간 json을 가져와서 돌림
 		// json 테스트
 		/* var jsontest = '/khaki/resources/assets/json/test1.json';
@@ -88,7 +105,6 @@
 			/*
 				동적태그 이벤트
 			$(document).on("click","#btn",function(){
-			
 			}
 			*/
 			$(document).on("click",".dropdown-min-menu2",function(){
@@ -450,12 +466,12 @@
 	            					<div class="form-group">
 		            					<div class="row">
 		            						<div class="col col-sm-9">
-		            							<input type="text" class="form-control" name="carnum" value="차량번호">
+		            							<input type="text" class="form-control" id="carnum" name="carnum" placeholder="차량번호">
 		            						</div>
 		            					</div>
 		            					<div class="row">
 		            						<div class="col col-sm-9">
-		            							<input type="text" class="form-control" name="distance" value="총 운행 Km">
+		            							<input type="text" class="form-control" id="total_distance" name="distance" placeholder="총 운행 Km">
 		            						</div>
 		            					</div>
 		            					<!-- 순서 : 브랜드 -> 차량명 -> 연료, 사이즈 저절로 나오게 -->
@@ -542,6 +558,21 @@
 		            					<input type="hidden" class="form-control" name="brand" id="brand">
 		            					<input type="hidden" class="form-control" name="fuel" id="fuel">
 		            					<input type="hidden" class="form-control" name="car_size" id="car_size">
+		            					
+		            					<!-- 소모품DB에 들어가는 값들 -->
+		            					<input type="hidden" name="carnum1" id="carnum1">
+		            					<input type="hidden" name="belt_timing_num" id="consumable1">
+		            					<input type="hidden" name="belt_operation_num" id="consumable2">
+		            					<input type="hidden" name="oil_engine_num" id="consumable3">
+		            					<input type="hidden" name="oil_transmission_num" id="consumable4">
+		            					<input type="hidden" name="oil_break_num" id="consumable5">
+		            					<input type="hidden" name="filter_aircon_num" id="consumable6">
+		            					<input type="hidden" name="filter_fuel_num" id="consumable7">
+		            					<input type="hidden" name="filter_aircleaner_num" id="consumable8">
+		            					<input type="hidden" name="etc_coolant_num" id="consumable9">
+		            					<input type="hidden" name="etc_battery_num" id="consumable10">
+		            					<input type="hidden" name="etc_tire_num" id="consumable11">
+		            					
 	            					</div>	<!-- form-group End -->
 	            				</div>
 	            			</div>

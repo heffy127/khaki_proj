@@ -256,13 +256,12 @@
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
-          <div class="col-lg-7 col-md-10">
+          <div class="col-lg-12 col-md-12">
             <h1 class="display-2 text-white">반갑습니다. ${sessionName}님</h1>
-            <p class="text-white mt-0 mb-5"> 언제, 어디서나, 차가 필요한 모든 순간 KHAKI를 찾아주세요!
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            	함께 달리며 더 나은 미래를 만듭니다. 대한민국 1등 카셰어링, KHAKI</p>
-            <a href="#!" class="btn btn-info">Edit profile</a>
+            <div>
+            	<font color="#e0e0e0">언제, 어디서나, 차가 필요한 모든 순간 KHAKI를 찾아주세요!<br>
+            	함께 달리며 더 나은 미래를 만듭니다. 대한민국 1등 카셰어링, KHAKI</font>
+            </div>
           </div>
         </div>
       </div>
@@ -359,9 +358,9 @@
               <div class="card shadow">
 			    <div class="card-body" style="padding: 4px">
 			        <div class="tab-content" id="myTabContent">
-			            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+			            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab" style="text-align: center">
 			              
-			              <iframe src="mypage_memberInfo.do" width="1113" height="900" frameborder="0"></iframe>
+			              <iframe src="mypage_memberInfo.do" width="1120" height="1150" frameborder="0"></iframe>
 			            
 			            </div>
 			            <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">

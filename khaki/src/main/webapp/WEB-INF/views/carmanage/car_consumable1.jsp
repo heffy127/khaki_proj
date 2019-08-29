@@ -15,15 +15,24 @@
 			var distance = <%=distance%>;
 			//var distance1 = parseInt(distance);
 			
-			/* 
-				배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
-			*/
+			 
+			//배열 순서대로 타이밍벨트, 구동벨트, 엔진오일, 변속기오일, 브레이크 오일, 에어컨필터, 연료필터, 에어클리너, 냉각수, 배터리, 타이어 순서
 			var arr = new Array(100000, 30000, 10000, 30000, 40000, 15000, 30000, 20000, 50000, 60000, 30000);
 			var num = 0;
 			var percentage = 0;
+			
+			
 			// remainder 변수를 통해서 각 소모품주기 기준수로 나눠줌
 			for(var i=0; i<arr.length;i++){
 				var remainder = distance % arr[i];
+				
+				// 나눗셈 몫 = 교체해야할 시기
+				// 각 소모품 별 교체횟수, 교체 시기 DB작성(교체횟수와 비교하여 교체횟수와 현재 교체되었어야할 횟수가 동일하면 %표기, 그 외에는 교체요망 표기)
+				var change_num = Math.floor(distance / arr[i]);
+				alert(change_num);
+				
+				
+				// % 표기를 위한 계산식(총 운행 / 기준)
 				if(remainder == 0){
 					remainder = 0;
 				}else if(remainder < 1){
@@ -31,16 +40,14 @@
 				}
 				else{};
 				
-				
-				
 				// Math.round() 함수는 반올림
 				percentage = Math.round(remainder / arr[i] * 100);
-				alert((i+1)+"번째 : 총운행 "+distance+" / 나머지 " +remainder+" / 기준 "+ arr[i] + " / 퍼센트 "+percentage);
+				// alert((i+1)+"번째 : 총운행 "+distance+" / 나머지 " +remainder+" / 기준 "+ arr[i] + " / 퍼센트 "+percentage);
 				// 100% 됐을 때와 넘었을 때 분기 처리
 				
 				num = percentage;
-				// num값이 바뀌어서 들어오는 문제
 				// 배열 index는 0부터
+				// 하위 CSS변경 작업
 				$(".pctest1_"+(i+1)).children("span").text(num+'%');
 				
 				if(num<=50 && num >= 0){
@@ -65,7 +72,7 @@
 					//alert((i+1)+"번째 : not range!!" + arr[i]);
 				}
 				
-			};
+			};	//for문 End
 			
 			
 			/* var num = 75;
